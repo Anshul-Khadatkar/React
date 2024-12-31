@@ -14,6 +14,7 @@ function App() {
     else if (counter < 20) {
       // counter = counter + 1; //can directly calculate below or calculate here and pass counter below
     setCount(counter+1)
+    
     } else {
       counter = "Value greater than 20"
       setCount(counter)
