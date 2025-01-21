@@ -15,29 +15,51 @@
 
 
 
+// import { useEffect, useState } from "react";
+
+// function useCurrencyInfo(currency) {
+//     const [data, setData] = useState({});
+    
+//     useEffect(() => {
+//         // Fetch data from the updated API URL
+//         fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${currency}.json`)
+//             .then((res) => res.json())
+//             .then((res) => {
+//                 // Update the state with the correct data structure
+//                 setData(res[currency]);  // Access data based on the currency
+//             })
+//             .catch((error) => {
+//                 console.error("Error fetching currency data:", error);
+//             });
+//     }, [currency]);
+
+//     console.log(data);  // You can remove this in production or when not debugging
+
+//     return data;
+// }
+
+// export default useCurrencyInfo;
+
+
+
+
 import { useEffect, useState } from "react";
 
 function useCurrencyInfo(currency) {
-    const [data, setData] = useState({});
-    
-    useEffect(() => {
-        // Fetch data from the updated API URL
-        fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${currency}.json`)
-            .then((res) => res.json())
-            .then((res) => {
-                // Update the state with the correct data structure
-                setData(res[currency]);  // Access data based on the currency
-            })
-            .catch((error) => {
-                console.error("Error fetching currency data:", error);
-            });
-    }, [currency]);
+  const [data, setData] = useState({});
+  
+  useEffect(() => {
+    fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${currency}.json`)
+      .then((res) => res.json())
+      .then((res) => {
+        setData(res[currency]);  // Update state with correct data structure
+      })
+      .catch((error) => {
+        console.error("Error fetching currency data:", error);
+      });
+  }, [currency]);
 
-    console.log(data);  // You can remove this in production or when not debugging
-
-    return data;
+  return data;  // Return data directly
 }
 
 export default useCurrencyInfo;
-
-
