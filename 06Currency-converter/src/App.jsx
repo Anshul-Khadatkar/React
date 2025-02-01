@@ -204,7 +204,7 @@ function App() {
 
   return (
     <div
-      className="w-full h-screen flex justify-center items-center bg-cover bg-no-repeat"
+      className="w-screen h-screen flex justify-center items-center bg-cover bg-no-repeat"
       style={{
         backgroundImage: `url('https://static.vecteezy.com/system/resources/previews/010/067/576/non_2x/monopoly-money-background-free-vector.jpg')`,
       }}
