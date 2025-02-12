@@ -1,0 +1,23 @@
+/* Parent Card */
+.parent-card {
+    border: 2px solid black;
+    padding: 15px;
+    margin: 20px;
+    text-align: center;
+    width: 300px;
+  }
+  
+  /* Children Card */
+  .children-card {
+    border: 2px solid blue;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  /* GrandChildren Card */
+  .grandchildren-card {
+    border: 2px solid red;
+    padding: 10px;
+    margin: 10px;
+  }
+  
